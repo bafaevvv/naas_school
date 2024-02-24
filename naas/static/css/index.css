@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    src: url(../fonts/);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+/* Header */
+header{
+    background: #fff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo{
+    margin-left: 15px;
+}
+header .menu ul.nav{
+    list-style: none;
+    display: flex;
+}
+header .menu ul.nav li{
+    margin-left: 80px;
+    transition: opacity 500ms ease;
+}
+header .menu ul.nav li:hover{
+    opacity: 0.5;
+}
+header .menu ul.nav li:last-child{
+    margin-right: 60px;
+}
+header .menu ul.nav li a{
+    color: #00367D;
+    font-weight: 600;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/* hr-text */
+.hr-text {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: #00367D;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+    font-weight: 600;
+    font-size: 20px;
+    &:before {
+      content: '';
+      background: linear-gradient(to right, transparent, #00367D, transparent);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+    }
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: #00367D;
+  
+      padding: 0 .5em;
+      line-height: 1.5em;
+      color: #00367D;
+      background-color: #fff;
+    }
+  }
+
+/* Main */
+main{
+    width: 95%;
+    margin: 35px;
+    margin-top: 30px;
+}
+main .presentation{
+    height: 500px;
+    width: 100%;
+    background: url('../images/banner.jpg');
+    position: relative;
+    background-blend-mode: multiply;
+    background-color: #696969;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 20px;
+}
+main .presentation::after{
+    content: 'WE NOT ONLY TEACH ENGLISH, WE CHANGE LIVES!';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 600px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+}
+main .presentation::before{
+    content: 'Free seminars, conversation clubs, trainings every Sunday';
+    position: absolute;
+    top: 220px;
+    left: 50px;
+    width: 600px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+/* Main(About) */
+main .about_us{
+    display: flex;
+}
+main .about_us .photo{
+    float: left;
+    width: 50%;
+}
+main .about_us .photo img{
+    width: 100%;
+    border-radius: 20px;
+}
+main .about_us .about_content{
+    float: right;
+    width: 50%;
+    margin-left: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;    
+    background-color: #00367D;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+main .about_us .about_content .row .col{
+    margin-top: 25px;
+    padding: 10px;
+}
+main .about_us .about_content .row .col:first-child{
+    margin-top: 0px;
+}
+main .about_us .about_content .row .col h1{
+    color: #fff;
+}
+main .about_us .about_content .row .col p{
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Main(Why us?) */
+main .why_us_section .columns{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+main .columns .column{
+    transition: transform 500ms ease;
+    position: relative;
+    width: 400px;
+}
+main .columns .column:hover{
+    transform: scale(1.05);
+}
+main .columns .column img{
+    position: relative;
+    border-radius: 20px;
+    width: 400px;
+}
+main .columns .column .text-block{
+    position: absolute;
+    bottom: 40px;
+    width: 300px;
+    left: 30px;
+    color: #00367D;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+/* Main(Courses) */
+main .courses{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+main .courses .course_col{
+    background: #00367D;
+    color: #fff;
+    border-radius: 20px;
+    width: 400px;
+    margin-right: 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: transform 500ms ease;
+}
+main .courses .course_col:hover{
+    transform: scale(1.05);
+}
+main .courses .course_col:last-child{
+    margin-right: 0px;
+}
+main .courses .course_col h2, h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+main .courses .course_col hr{
+    margin-top: 20px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+main .courses .course_col span{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 500;
+}
+
+/* Main(Teacher) */
+main .teachers{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+main .teachers img{
+    width: 300px;
+    border-radius: 20px;
+}
+main .teachers .teacher-1{
+    width: 50%;
+    display: flex;
+    background: #00367D;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+main .teachers .teacher-2{
+    width: 50%;
+    display: flex;
+    background: #00367D;
+    border-radius: 20px;
+}
+main .teachers  .teacher-info{
+    color: #fff;
+    border: #00367D 2px solid;
+    margin-left: 25px;
+    width: 350px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+main .teachers  .teacher-info h3{
+    padding-top: 20px;
+    text-align: center;
+}
+main .teachers  .teacher-info hr{
+    height: 2px;
+    background: #fff;
+}
+main .teachers  .teacher-info span{
+    display: flex;
+    padding-top: 20px;
+    margin: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Footer */
+footer .footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+footer .footer .footer_logo{
+    width: 50%;
+}
+footer .footer .contact{
+    width: 50%;
+    color: #00367D;
+    padding: 15px;
+}
+footer .footer .contact .contacts{
+    display: flex;
+    justify-content: space-around;
+}
+footer .footer .contact .contacts .worked_time span{
+    display: flex;
+    margin-top: 5px;
+}
+footer .footer .contact .contacts .phone span{
+    display: flex;
+    margin-bottom: 10px;
+}
+ion-icon {
+    font-size: 32px;
+    cursor: pointer;
+    color: #00367D;
+}
+

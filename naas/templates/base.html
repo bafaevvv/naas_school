@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../static/css/index.css">
+      <link rel="stylesheet" href="../static/css/responsive.css">
+
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+      <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+      <title>Naas School</title>
+
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script>
+            $(document).ready(function () {
+                  $('.photo').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        arrows: false,
+                        fade: true,
+                  });
+            });
+      </script>
+
+
+</head>
+
+<body>
+      <header>
+            <div class="logo">
+                  <a href="{% url 'home' %}"><img src="../static/images/naas_logo.png" alt="" width="180"></a>
+            </div>
+            <div class="menu">
+                  <ul class="nav">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="#about">About</a></li> 
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#teacher">Teachers</a></li>
+                  </ul>
+            </div>
+
+            <div class="hamburger-menu">
+                  <input id="menu__toggle" type="checkbox" />
+                  <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                  </label>
+                  <ul class="menu__box">
+                        <li><a class="menu__item" href="{% url 'home' %}">Home</a></li>
+                        <li><a class="menu__item" href="#about">About</a></li>
+                        <li><a class="menu__item" href="#courses">Courses</a></li>
+                        <li><a class="menu__item" href="#teacher">Teachers</a></li>
+                  </ul>
+            </div>
+
+      </header>
+      <main>
+            <div class="presentation"></div>
+            <div id="about" class="about_section">
+                  <hr class="hr-text" data-content="ABOUT">
+                  <div class="about_us">
+                        <div class="photo">
+                              <div>
+                                    <img src="../static/images/carousel_1.jpg" alt="" width="500" height="500">
+                              </div>
+                              <div>
+                                    <img src="../static/images/carousel_2.jpg" alt="" width="500" height="500">
+                              </div>
+                              <div>
+                                    <img src="../static/images/carousel_3.JPG" alt="" width="500" height="500">
+                              </div>
+                              <div>
+                                    <img src="../static/images/carousel_4.jpg" alt="" width="500" height="500">
+                              </div>
+                              <div>
+                                    <img src="../static/images/carousel_5.jpg" alt="" width="500" height="500">
+                              </div>
+                              <div>
+                                    <img src="../static/images/carousel_6.jpg" alt="" width="500" height="500">
+                              </div>
+                        </div>
+                        <div class="about_content">
+                              <div class="row">
+                                    <div class="col">
+                                          <h1>5,000+</h1>
+                                          <p>Total number of students.</p>
+                                    </div>
+                                    <div class="col">
+                                          <h1>500+</h1>
+                                          <p>Total passed IELTS.</p>
+                                    </div>
+                                    <div class="col">
+                                          <h1>100+</h1>
+                                          <p>They entered universities.</p>
+                                    </div>
+                                    <div class="col">
+                                          <h1>50+</h1>
+                                          <p>We received 7+ in total.</p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div id="why_us" class="why_us_section">
+                  <hr class="hr-text" data-content="WHY CHOOSE US?">
+                  <div class="columns">
+                        <div class="column">
+                              <img src="../static/images/img_3.jpg" alt="">
+                              <div class="text-block">
+                                    <h4>We provide materials developed by the British university.</h4>
+                              </div>
+                        </div>
+                        <div class="column">
+                              <img src="../static/images/img_1.jpg" alt="">
+                              <div class="text-block">
+                                    <h4>An individual approach to each student allows you to learn the learning material
+                                          even better.</h4>
+                              </div>
+                        </div>
+                        <div class="column">
+                              <img src="../static/images/img_2.jpg" alt="">
+                              <div class="text-block">
+                                    <h4>Our learning center is equipped with advanced technologies, the best conditions
+                                          for high-level education have been created.</h4>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div id="courses" class="course_section">
+                  <hr class="hr-text" data-content="COURSES">
+                  <div class="courses">
+                        <div class="course_col">
+                              <h2>IELTS/CEFR</h2>
+                              <h3>799 000 UZS</h3>
+                              <hr>
+                              <span>Group: 10-12 students</span>
+                              <span>3 times on week</span>
+                              <span>Academic Support</span>
+                              <span>Speaking Club</span>
+                              <span>Mock Test</span>
+                        </div>
+                        <div class="course_col">
+                              <h2>GENERAL ENGLISH</h2>
+                              <h3>599 000 UZS</h3>
+                              <hr>
+                              <span>Group: 12-14 students</span>
+                              <span>3 times on week</span>
+                              <span>Academic Support</span>
+                              <span>Speaking Club and Master-Class</span>
+                        </div>
+                        <div class="course_col">
+                              <h2>JUNIOR ENGLISH</h2>
+                              <h3>499 000 UZS</h3>
+                              <hr>
+                              <span>Group: 12-14 students</span>
+                              <span>3 times on week</span>
+                              <span>Academic Support</span>
+                              <span>Speaking Club and Maste-Class</span>
+                        </div>
+                        <div class="course_col">
+                              <h2>SAT MATH</h2>
+                              <h3>799 000 UZS</h3>
+                              <hr>
+                              <span>Group: 10-12 students</span>
+                              <span>3 times on week</span>
+                              <span>Academic Support</span>
+                              <span>Master-Class</span>
+                        </div>
+                  </div>
+            </div>
+            <div id="teacher" class="teacher_section">
+                  <hr class="hr-text" data-content="TEACHERS">
+                  <div class="teachers">
+                        <div class="teacher-1">
+                              <img src="../static/images/teacher_1.JPG" alt="photo">
+                              <div class="teacher-info">
+                                    <h3>Nosir Narziyev</h3>
+                                    <hr>
+                                    <span>Experience: 5+ years</span>
+                                    <span>Results: Learned 700+ students.</span>
+                                    <span>About: An individual approach to each student allows you to learn the learning
+                                          material even better.</span>
+                              </div>
+                        </div>
+                        <div class="teacher-2">
+                              <img src="../static/images/teacher_2.jpg" alt="photo">
+                              <div class="teacher-info">
+                                    <h3>Mr's.Xalima</h3>
+                                    <hr>
+                                    <span>Experience: 5+ years</span>
+                                    <span>Results: Learned 500+ students.</span>
+                                    <span>About: An individual approach to each student allows you to learn the learning
+                                          material even better.</span>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </main>
+      <footer>
+            <div class="footer">
+                  <div class="footer_logo">
+                        <img src="../static/images/naas_logo.png" alt="" width="300">
+                  </div>
+                  <div class="contact">
+                        <div class="contacts">
+                              <div class="worked_time">
+                                    <h3>Working hours:</h3>
+                                    <span>9:00-21:00</span>
+                                    <span>From Monday to Saturday</span>
+                              </div>
+                              <div class="phone">
+                                    <h3>Telephone:</h3>
+                                    <span>+998 97 455 31 33</span>
+                                    <a href="https://www.instagram.com/naas_school?igsh=djd2b2xsY2RuYWhk"><ion-icon
+                                                name="logo-instagram"></ion-icon></a>
+                                    <a href=""><ion-icon name="navigate-circle-outline"></ion-icon></a>
+                                    <a href="https://maps.app.goo.gl/M3eA9vg3XxArp9hc8"><ion-icon
+                                                name="location-outline"></ion-icon></a>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </footer>
+      <script src="../static/js/burger.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
